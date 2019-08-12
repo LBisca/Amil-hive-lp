@@ -861,10 +861,10 @@ footer {
 .compare-table {
   font-family: AmilTypeFace-Medium;
   width: 75vw;
-  max-width: 1568px;
+  max-width: 1200px;
   margin: 0px auto;
   border-collapse: separate;
-  border-spacing: 12px 0px;
+  border-spacing: 12px 4px;
 }
 
 .compare-table td {
@@ -883,8 +883,9 @@ footer {
   color: #fff;
   background-color: #7a79f5;
   border-top-right-radius: 8px;
-  padding: 20px 0px;
+  padding: 15px 0px 5px;
   line-height: 1em;
+  position: relative;
   border-top-left-radius: 8px;
 }
 
@@ -892,24 +893,67 @@ footer {
   font-size: 3em;
   color: #fff;
   border-radius: 0;
-  position: relative;
   background-color: #4746ff;
 }
 .compare-table th.active p {
-  margin-bottom: 15px;
+  margin-bottom: 10px;
 }
 
-.compare-table th.active::after {
-  height: 20px;
+.compare-table th.active::before {
+  height: 10px;
   display: block;
   width: 100%;
-  top: -20px;
+  top: -10px;
   position: absolute;
   background: #4746ff;
   border-right: 1px white;
   border-top-left-radius: 8px;
   border-top-right-radius: 8px;
   content: "";
+}
+
+.compare-table th:nth-child(1)::after {
+  content: "";
+  background-color: #fff;
+}
+
+.compare-table th.active::after {
+  height: 4px;
+  display: block;
+  width: 100%;
+  bottom: -4px;
+  position: absolute;
+  background: #4746ff;
+  border-right: 1px white;
+  content: "";
+}
+
+.compare-table th::after {
+  height: 4px;
+  display: block;
+  width: 100%;
+  bottom: -4px;
+  position: absolute;
+  background: #7a79f5;
+  border-right: 1px white;
+  content: "";
+}
+
+.compare-table td:nth-child(1) {
+  text-align: left;
+}
+
+.compare-table td {
+  font-size: 2.5em;
+  color: #a0a0a0;
+  text-align: center;
+  padding: 15px 0px;
+  background-color: #f2f2f2;
+}
+
+.compare-table td:nth-child(1) {
+  background-color: #fff;
+  border-bottom: 1px solid #c4c4c4;
 }
 
 .content-wrapper {
