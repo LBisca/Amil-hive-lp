@@ -128,6 +128,27 @@
   }
 }
 
+.flex {
+  display: flex;
+}
+
+.align-center {
+  align-items: center;
+}
+
+.space-right {
+  margin-right: 60px;
+}
+
+.space-right.big {
+  margin-right: 120px;
+}
+
+.space-between {
+  display: flex;
+  justify-content: space-between;
+}
+
 .price-md {
   padding-top: 8px;
   margin-right: 51% !important;
@@ -324,6 +345,15 @@ footer {
   height: 50vw;
   align-items: center;
   font-size: 12px !important;
+}
+
+.header-top-cart {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  font-size: 12px !important;
+  max-width: 1200px;
+  margin: 0px auto;
 }
 
 .header-image-container {
@@ -865,21 +895,18 @@ footer {
   margin: 0px auto;
   border-collapse: separate;
   border-spacing: 12px 4px;
-}
-
-.compare-table td {
-  padding: 10px;
+  margin-bottom: 13em;
 }
 
 .compare-table th:nth-child(1) {
   text-align: left;
   color: #2da7fc;
-  font-size: 3.3em;
+  font-size: 2.8em;
   background-color: #fff;
 }
 
 .compare-table th {
-  font-size: 2.8em;
+  font-size: 2.2em;
   color: #fff;
   background-color: #7a79f5;
   border-top-right-radius: 8px;
@@ -890,20 +917,21 @@ footer {
 }
 
 .compare-table th.active {
-  font-size: 3em;
+  font-size: 2.8em;
   color: #fff;
   border-radius: 0;
   background-color: #4746ff;
 }
+
 .compare-table th.active p {
   margin-bottom: 10px;
 }
 
 .compare-table th.active::before {
-  height: 10px;
+  height: 20px;
   display: block;
   width: 100%;
-  top: -10px;
+  top: -20px;
   position: absolute;
   background: #4746ff;
   border-right: 1px white;
@@ -940,20 +968,65 @@ footer {
 }
 
 .compare-table td:nth-child(1) {
+  font-size: 2.2em;
   text-align: left;
+  background-color: #fff;
+  /* border-bottom: 1px solid #c4c4c4; */
+}
+
+.compare-table td:nth-child(1)::after {
+  height: 2px;
+  display: block;
+  left: 0px;
+  width: calc(100% + 12px);
+  bottom: -3px;
+  position: absolute;
+  background: #c4c4c4;
+  border-right: 1px white;
+  content: "";
+}
+
+.compare-table tr:last-child td:nth-child(1)::after {
+  content: none;
+}
+
+.compare-table tr:last-child td {
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
 }
 
 .compare-table td {
-  font-size: 2.5em;
+  font-size: 1.8em;
   color: #a0a0a0;
+  position: relative;
   text-align: center;
-  padding: 15px 0px;
+  height: 65px;
+  padding: 0px;
   background-color: #f2f2f2;
 }
 
-.compare-table td:nth-child(1) {
-  background-color: #fff;
-  border-bottom: 1px solid #c4c4c4;
+.compare-table td img.check-true {
+  margin-bottom: -8px;
+}
+
+.compare-table td.active {
+  background-color: #e8e8e8;
+}
+
+.compare-table td.last::after {
+  height: 28px;
+  display: block;
+  width: 100%;
+  bottom: -20px;
+  position: absolute;
+  background: #e8e8e8;
+  border-right: 1px white;
+  content: "";
+  border-bottom-right-radius: 8px;
+  border-bottom-left-radius: 8px;
+}
+.compare-table td img {
+  width: 32px;
 }
 
 .content-wrapper {
@@ -1562,24 +1635,24 @@ footer {
   display: flex;
   justify-content: center;
   text-align: center;
+  font-family: AmilTypeFace-Medium;
 }
 
 .payment > p {
-  font-size: 2em;
-  line-height: 2em;
   color: #4746ff;
+  font-size: 2.2em;
+  line-height: 2.2em;
 }
 
 .payment > select {
   cursor: pointer;
   position: relative;
-  font-size: 2em;
-  height: 2em;
-  font-family: AmilTypeFace-Bold;
+  height: 2.2em;
   display: block;
+  font-size: 2.25em;
+  line-height: 2.25em;
   font-weight: 700;
   color: #00d896;
-  line-height: 2em;
   padding-left: 0.5em;
   padding-right: 1.65em;
   max-width: 100%;
@@ -1652,6 +1725,176 @@ footer {
 .txt-cep--vidas {
   margin-right: 6.1em;
   width: 15%;
+}
+
+.cart-label {
+  font-size: 2.8em;
+  color: #b4b4b4;
+  font-family: AmilTypeFace-Regular;
+  margin-bottom: 40px;
+}
+
+.cart-plan {
+  background-color: #4746ff;
+  color: #fff;
+  font-family: AmilTypeFace-Bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 14px;
+  width: 7.5em;
+  height: 1.9em;
+  font-size: 4em;
+}
+
+.cart-item-total {
+  color: #4746ff;
+  font-family: AmilTypeFace-Regular;
+  font-size: 3.2em;
+}
+
+.cart-qtd {
+  border: 1px solid #b2b2b2;
+  background-color: #f2f2f2;
+  width: 9.1em;
+  height: 3.1em;
+  border-radius: 8px;
+  color: #a0a0a0;
+  font-family: AmilTypeFace-Medium;
+  font-size: 2.2em;
+  overflow: hidden;
+  position: relative;
+}
+
+.cart-qtd-btn div {
+  height: 50%;
+}
+
+.cart-qtd p {
+  line-height: 3.1em;
+  padding-left: 15px;
+}
+
+.cart-voltar {
+  color: #00d896;
+  font-size: 2em;
+  font-family: AmilTypeFace-Bold;
+  margin-top: 20px;
+}
+
+.cart-qtd-btn {
+  position: absolute;
+  color: #fff;
+  right: 0px;
+  height: 100%;
+  text-align: center;
+  width: 40px;
+  font-size: 1.2em;
+  top: 0px;
+}
+
+.cart-qtd-btn div {
+  height: 50%;
+  position: relative;
+  cursor: pointer;
+  background: #00d896;
+  transition: 0.3s background;
+}
+
+.cart-qtd-btn div:hover {
+  background: #20c693;
+}
+
+.cart-qtd-btn div:nth-child(1)::after {
+  height: 1px;
+  display: block;
+  width: 20px;
+  bottom: -1px;
+  left: calc(50% - 10px);
+  position: absolute;
+  z-index: 3;
+  background: #81edcc;
+  border-right: 1px white;
+  content: "";
+}
+
+.cart-subtotal {
+  height: 50px;
+  float: right;
+}
+
+.cart-subtotal-value p {
+  font-size: 2.5em;
+  color: #b4b4b4;
+  line-height: 50px;
+  font-family: AmilTypeFace-Regular;
+  margin-right: 25px;
+}
+
+.cart-subtotal-value span {
+  font-size: 3.2em;
+  color: #758091;
+  line-height: 50px;
+  font-family: AmilTypeFace-Regular;
+}
+
+.cart-btn-buy {
+  margin-top: 15px;
+  background-color: #00d896;
+  color: #fff;
+  width: 10.31em;
+  height: 2.2em;
+  display: flex;
+  border: none;
+  font-size: 3.125em;
+  font-family: AmilTypeFace-Bold;
+  font-weight: 700;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  border-radius: 70px;
+  cursor: pointer;
+}
+
+.cart-btn-buy:focus {
+  outline: 0;
+}
+
+.cart-btn-buy:hover {
+  transition: filter 0.3s;
+  filter: brightness(85%);
+}
+
+#subtotal {
+  max-width: 1200px;
+  position: relative;
+  margin: 0px auto;
+  height: 20em;
+  margin-top: 4.5em;
+}
+
+#cart {
+  border-top: 2px solid #4746ff;
+  border-bottom: 2px solid #4746ff;
+  margin: 0px auto;
+  max-width: 1200px;
+  padding-bottom: 40px;
+}
+
+#cart h1 {
+  color: #4746ff;
+  font-family: AmilTypeFace-Light;
+  font-size: 5.5em;
+  font-weight: 200;
+  margin: 15px 0px;
+}
+
+#cart .produto {
+  margin-bottom: 45px;
+}
+
+#cart .produto:last-child {
+  margin-bottom: 0px;
 }
 
 /*# sourceMappingURL=styles.css.css.map */
