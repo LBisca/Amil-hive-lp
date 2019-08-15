@@ -1,4 +1,4 @@
-@media only screen and (max-width: 600px) {
+index.php@media only screen and (max-width: 600px) {
   .btn-cla-doc1 {
     margin-left: 0 !important;
     margin-top: 0 !important;
@@ -1641,7 +1641,7 @@ footer {
 .payment > p {
   color: #4746ff;
   font-size: 2.2em;
-  line-height: 2.2em;
+  line-height: 2.4em;
 }
 
 .payment > select {

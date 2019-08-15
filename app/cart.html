@@ -31,7 +31,7 @@
     <section id="cart">
       <div class="space-between">
         <h1>Seu carrinho</h1>
-        <a class="cart-voltar">Voltar</a>
+        <a id="voltar" class="cart-voltar">Voltar</a>
       </div>
 
       <!-- Produtos -->
@@ -204,6 +204,8 @@
 
   })
 
-
+  $("#voltar").click(function () {
+    window.history.back();
+  })
 
 </script>
