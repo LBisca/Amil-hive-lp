@@ -1780,6 +1780,7 @@ footer {
   font-size: 2em;
   font-family: AmilTypeFace-Bold;
   margin-top: 20px;
+  cursor: pointer;
 }
 
 .cart-qtd-btn {
