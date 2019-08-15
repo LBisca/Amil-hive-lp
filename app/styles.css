@@ -151,8 +151,7 @@ index.php@media only screen and (max-width: 600px) {
 
 .price-md {
   padding-top: 8px;
-  margin-right: 51% !important;
-  width: 100%;
+  text-align: left;
 }
 
 .destaque-preco {
@@ -171,18 +170,31 @@ index.php@media only screen and (max-width: 600px) {
 .price-modal {
   font-family: AmilTypeFace-Medium;
   color: #4700ff;
-  font-size: 28px;
+  font-size: 3.8em;
   text-align: center;
+}
+
+.price-modal-label {
+  font-family: AmilTypeFace-Medium;
+  color: #4700ff;
+  font-size: 2.5em;
+  text-align: left;
 }
 
 /* Modal Content */
 .modal-content {
-  border-radius: 5em;
+  border-radius: 16px;
   background-color: #fefefe;
   margin: auto;
   border: 1px solid #888;
-  width: 35%;
-  height: 41em;
+  width: 50em;
+  height: 45em;
+}
+
+.modal-disclaimer {
+  color: #2da7fc;
+  font-size: 1.8em;
+  font-family: AmilTypeFace-Regular;
 }
 
 /* The Close Button */
@@ -1682,32 +1694,28 @@ footer {
 }
 
 .modal-btn {
-  width: 33% !important;
-  font-size: 19px;
+  font-size: 2.5em;
   /* margin-right: 2.8em; */
+  margin-top: 1em;
   float: right;
-  margin-top: 30px;
   /* margin: auto; */
-  margin-right: 33%;
 }
 
 .txt-modal {
-  color: #4746ff;
-  font-size: 3.3em;
+  color: #3100ff;
+  font-size: 3em;
   /* float: left; */
-  font-family: AmilTypeFace-Light;
+  font-family: AmilTypeFace-Regular;
 }
 .txt-cep {
   float: right;
   text-align: left;
   padding: 1%;
-  margin-right: 65px;
-  margin-top: -8.1%;
-  height: 29px;
+  margin-left: 15px;
+  height: 35px;
   font-family: AmilTypeFace-Light;
-  font-size: 24px;
-  width: 35%;
-  border-radius: 10px;
+  width: 140px;
+  border-radius: 6px;
   background-color: #f2f3f4 !important;
   border: 1px solid #ccc;
   padding-left: 9px;
@@ -1725,6 +1733,76 @@ footer {
 .txt-cep--vidas {
   margin-right: 6.1em;
   width: 15%;
+}
+
+.modal-qtd {
+  border: 1px solid #b2b2b2;
+  background-color: #f2f2f2;
+  width: 8.8em;
+  height: 2em;
+  border-radius: 5px;
+  color: #a0a0a0;
+  font-family: AmilTypeFace-Medium;
+  font-size: 2.2em;
+  overflow: hidden;
+  position: relative;
+}
+
+.modal-qtd.align-center {
+  text-align: center;
+}
+
+.modal-qtd p {
+  line-height: 2em;
+  padding-left: 15px;
+}
+
+.modal-qtd-btn {
+  position: absolute;
+  color: #fff;
+  right: 0px;
+  height: 100%;
+  text-align: center;
+  width: 1.8em;
+  font-size: 1em;
+  top: 0px;
+}
+
+.modal-qtd-btn div {
+  height: 50%;
+  position: relative;
+  line-height: 1em;
+  cursor: pointer;
+  background: #00d896;
+  transition: 0.3s background;
+}
+
+.modal-qtd-btn div:nth-child(1)::after {
+  height: 1px;
+  display: block;
+  width: 20px;
+  bottom: -1px;
+  left: calc(50% - 10px);
+  opacity: 0.5;
+  position: absolute;
+  z-index: 3;
+  background: #81edcc;
+  border-right: 1px white;
+  content: "";
+}
+
+.modal-destaque {
+  border: none;
+  position: absolute;
+  margin-top: 10px;
+  font-family: AmilTypeFace-Medium;
+  color: #a4a4a4;
+  font-size: 1.8em;
+}
+
+.modal-destaque span {
+  font-size: 1.1em;
+  color: #8e8e8e;
 }
 
 .cart-label {
@@ -1803,6 +1881,10 @@ footer {
 }
 
 .cart-qtd-btn div:hover {
+  background: #20c693;
+}
+
+.modal-qtd-btn div:hover {
   background: #20c693;
 }
 
